@@ -33,5 +33,9 @@ func dialogic_signal(argument):
 	if argument =='_changescene':
 		get_tree().change_scene("res://nivel2.tscn")
 		get_tree().paused = false
-		#if argument =='_speed':
-			#movimiento.speed += 500
+	if argument =='_speed':
+		PLAYER.speed += 200
+	if argument =='_lowspeed':
+		PLAYER.speed -= 100
+	if argument =='_quitgame':
+		get_tree().quit()
